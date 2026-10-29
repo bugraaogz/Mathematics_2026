@@ -43,3 +43,4 @@ Your repository will be monitored for updates and progress across the exercises 
 
 When writing mathematical notation in Markdown, please follow the repository guidelines in [hints.md](hints.md) to ensure proper GitHub LaTeX rendering.
 Bugra oguz
+2026
