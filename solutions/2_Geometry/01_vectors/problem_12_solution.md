@@ -14,4 +14,4 @@ $$n = (1(-1) - (-2)3,\, (-2)(-1) - 1(-1),\, 1(3) - 1(-1)) = (5, 3, 4)$$
 3. Dot product verification:
 $$n \cdot u = 5(1) + 3(1) + 4(-2) = 5 + 3 - 8 = 0$$
 $$n \cdot v = 5(-1) + 3(3) + 4(-1) = -5 + 9 - 4 = 0$$
-The zero dot products confirm $n \perp u$ and $n \perp v$.
+Zero dot products verify $n \perp u$ and $n \perp v$.

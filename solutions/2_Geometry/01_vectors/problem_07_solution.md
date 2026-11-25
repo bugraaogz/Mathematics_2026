@@ -8,7 +8,7 @@ Given $u=(1,2,3)$, $v=(2,4,6)$, $w=(0,1,1)$. Identify a specific relation betwee
 $$v = 2u$$
 
 2. Linear independence decision:
-The set $\{u, v, w\}$ is **linearly dependent**.
+The set $\{u, v, w\}$ is linearly dependent.
 
 3. Explanation:
-Since $v$ is a scalar multiple of $u$ ($v - 2u = 0$), the subset $\{u,v\}$ is linearly dependent, which automatically makes the entire set $\{u, v, w\}$ linearly dependent without needing matrix elimination or determinant calculations.
+Since $v$ is a scalar multiple of $u$ ($v - 2u = 0$), the subset $\{u,v\}$ is linearly dependent. This automatically makes the entire set $\{u, v, w\}$ linearly dependent without requiring Gaussian elimination or determinant calculations.

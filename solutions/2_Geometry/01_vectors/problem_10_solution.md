@@ -4,7 +4,7 @@ The points $A=(0,0,0)$, $B=(2,1,0)$, and $C=(1,3,2)$ form a triangle. Construct 
 
 ## Solution
 
-1. Vectors:
+1. Vectors $\overrightarrow{AB}$ and $\overrightarrow{AC}$:
 $$\overrightarrow{AB} = (2,1,0),\qquad \overrightarrow{AC} = (1,3,2)$$
 
 2. Parallelogram area:
@@ -14,4 +14,5 @@ $$\text{Area}_{\text{para}} = \|\overrightarrow{AB} \times \overrightarrow{AC}\|
 3. Triangle area:
 $$\text{Area}_{\text{tri}} = \frac{1}{2} \text{Area}_{\text{para}} = \frac{3\sqrt{5}}{2}$$
 
-4. The factor $\frac{1}{2}$ arises because a triangle formed by two vectors spans exactly half the area of the parallelogram formed by the same vectors.
+4. Explanation of factor $\frac{1}{2}$:
+A triangle defined by two vectors spans exactly half the area of the parallelogram formed by those same two vectors.

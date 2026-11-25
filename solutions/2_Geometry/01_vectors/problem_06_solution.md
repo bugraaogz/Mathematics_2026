@@ -11,7 +11,7 @@ $$\mathrm{proj}_v u = \frac{u \cdot v}{\|v\|^2} v = \frac{6}{2} (1,1) = (3,3)$$
 2. Perpendicular component $r$:
 $$r = u - \mathrm{proj}_v u = (4,2) - (3,3) = (1,-1)$$
 
-3. Verification $r \cdot v = 0$:
+3. Verification of orthogonality:
 $$r \cdot v = 1(1) + (-1)(1) = 1 - 1 = 0$$
 
-4. Geometrically, vector $u$ is decomposed into two orthogonal components: $\mathrm{proj}_v u$ (parallel to $v$) and $r$ (perpendicular to $v$).
+4. Geometrically, vector $u$ is decomposed into two orthogonal components: $\mathrm{proj}_v u$ (parallel to direction $v$) and $r$ (perpendicular to direction $v$).
