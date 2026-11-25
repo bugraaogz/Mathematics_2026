@@ -1,19 +1,41 @@
-## Question
+# Exercise 6. Projection and Perpendicular Component
 
-Project $u=(4,2)$ onto $v=(1,1)$, compute the residual $r$, verify $r\cdot v=0$, and explain the result geometrically.
+## Problem Statement
+
+Find the projection of $u=(4,2)$ onto the direction $v=(1,1)$. Then compute
+
+$$
+r=u-\mathrm{proj}_v\,u
+$$
+
+and verify that $r\cdot v=0$. Explain this result geometrically.
+
+---
 
 ## Solution
 
-Using the projection formula,
+### Part 1. Projection Computation
 
-$$\operatorname{proj}_v u=\frac{u\cdot v}{v\cdot v}v=\frac{6}{2}(1,1)=(3,3).$$
+$$
+u \cdot v = 4(1) + 2(1) = 6,\qquad \|v\|^2 = 1^2 + 1^2 = 2
+$$
 
-Thus
+$$
+\mathrm{proj}_v u = \frac{u \cdot v}{\|v\|^2} v = \frac{6}{2} \begin{pmatrix} 1 \\ 1 \end{pmatrix} = \begin{pmatrix} 3 \\ 3 \end{pmatrix}
+$$
 
-$$r=u-\operatorname{proj}_v u=(4,2)-(3,3)=(1,-1),$$
+### Part 2. Perpendicular Component $r$
 
-and the requested calculation is
+$$
+r = u - \mathrm{proj}_v u = \begin{pmatrix} 4 \\ 2 \end{pmatrix} - \begin{pmatrix} 3 \\ 3 \end{pmatrix} = \begin{pmatrix} 1 \\ -1 \end{pmatrix}
+$$
 
-$$r\cdot v=(1,-1)\cdot(1,1)=1-1=0.$$
+### Part 3. Perpendicularity Verification
 
-The projection $(3,3)$ is parallel to $v$, so it is the component of $u$ in the projection direction. Subtracting this parallel component leaves the perpendicular component $r$. The zero dot product verifies geometrically that $r$ is perpendicular to the direction $v$.
+$$
+r \cdot v = (1)(1) + (-1)(1) = 1 - 1 = 0
+$$
+
+### Part 4. Geometric Meaning
+
+Vector $u$ is decomposed into two orthogonal components: $\mathrm{proj}_v u$ (parallel to $v$) and $r$ (orthogonal to $v$).

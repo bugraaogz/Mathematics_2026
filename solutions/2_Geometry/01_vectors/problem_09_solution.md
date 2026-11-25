@@ -1,21 +1,33 @@
-## Question
+# Exercise 9. Cross Product as a Perpendicular Direction
 
-For $u=(1,2,0)$ and $v=(0,1,3)$, compute $u\times v$, verify perpendicularity to both vectors, and compare with $v\times u$.
+## Problem Statement
+
+For $u=(1,2,0)$ and $v=(0,1,3)$ compute $u\times v$. Use dot products to check perpendicularity to both vectors, compute $v\times u$, and compare the results.
+
+---
 
 ## Solution
 
-Expanding the determinant gives
+### Part 1. Computation of $u \times v$
 
-$$u\times v=(2\cdot3-0\cdot1,\;0\cdot0-1\cdot3,\;1\cdot1-2\cdot0)=(6,-3,1).$$
+$$
+u \times v = \det \begin{pmatrix} i & j & k \\ 1 & 2 & 0 \\ 0 & 1 & 3 \end{pmatrix} = i(6 - 0) - j(3 - 0) + k(1 - 0) = \begin{pmatrix} 6 \\ -3 \\ 1 \end{pmatrix}
+$$
 
-The dot-product checks are
+### Part 2. Perpendicularity Check
 
-$$(6,-3,1)\cdot(1,2,0)=6-6=0,$$
+$$
+(u \times v) \cdot u = 6(1) + (-3)(2) + 1(0) = 6 - 6 + 0 = 0
+$$
 
-$$(6,-3,1)\cdot(0,1,3)=-3+3=0.$$
+$$
+(u \times v) \cdot v = 6(0) + (-3)(1) + 1(3) = 0 - 3 + 3 = 0
+$$
 
-Thus the cross product is perpendicular to both original vectors. Reversing the order gives
+### Part 3. Computation of $v \times u$ and Comparison
 
-$$v\times u=(-6,3,-1)=-(u\times v),$$
+$$
+v \times u = \det \begin{pmatrix} i & j & k \\ 0 & 1 & 3 \\ 1 & 2 & 0 \end{pmatrix} = i(0 - 6) - j(0 - 3) + k(0 - 1) = \begin{pmatrix} -6 \\ 3 \\ -1 \end{pmatrix}
+$$
 
-so the perpendicular direction reverses orientation while keeping its magnitude.
+**Comparison:** $v \times u = -(u \times v)$. Reversing the product order negates the vector, reversing orientation while preserving magnitude.

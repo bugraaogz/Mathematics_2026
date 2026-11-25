@@ -1,19 +1,42 @@
-## Question
+# Exercise 13. Do Four Points Lie in One Plane?
 
-For $A=(0,0,0)$, $B=(1,2,0)$, $C=(0,1,1)$, and $D=(2,5,1)$, use a cross product and scalar triple-product check to decide whether the four points are coplanar.
+## Problem Statement
+
+Given
+
+$$
+A=(0,0,0),\qquad B=(1,2,0),\qquad C=(0,1,1),\qquad D=(2,5,1).
+$$
+
+1. Construct $\overrightarrow{AB}$ and $\overrightarrow{AC}$.
+2. Find $n=\overrightarrow{AB}\times\overrightarrow{AC}$.
+3. Construct $\overrightarrow{AD}$ and check whether $\overrightarrow{AD}\cdot n=0$.
+4. Based on this, decide whether $D$ lies in the plane determined by $A,B,C$, and justify the criterion.
+
+---
 
 ## Solution
 
-The in-plane candidates are
+### Part 1 & 2. In-Plane Vectors and Normal Vector $n$
 
-$$\overrightarrow{AB}=(1,2,0),\qquad \overrightarrow{AC}=(0,1,1).$$
+$$
+\overrightarrow{AB} = \begin{pmatrix} 1 \\ 2 \\ 0 \end{pmatrix},\qquad \overrightarrow{AC} = \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}
+$$
 
-Their cross product is
+$$
+n = \overrightarrow{AB} \times \overrightarrow{AC} = \det \begin{pmatrix} i & j & k \\ 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix} = i(2 - 0) - j(1 - 0) + k(1 - 0) = \begin{pmatrix} 2 \\ -1 \\ 1 \end{pmatrix}
+$$
 
-$$n=\overrightarrow{AB}\times\overrightarrow{AC}=(2,-1,1).$$
+### Part 3. Vector $\overrightarrow{AD}$ and Dot Product
 
-Also $\overrightarrow{AD}=(2,5,1)$. I compute
+$$
+\overrightarrow{AD} = D - A = \begin{pmatrix} 2 \\ 5 \\ 1 \end{pmatrix}
+$$
 
-$$\overrightarrow{AD}\cdot n=2\cdot2+5(-1)+1\cdot1=4-5+1=0.$$
+$$
+\overrightarrow{AD} \cdot n = 2(2) + 5(-1) + 1(1) = 4 - 5 + 1 = 0
+$$
 
-Since this value is zero, $\overrightarrow{AD}$ is perpendicular to the normal, so $D$ lies in the plane through $A,B,C$. The criterion is that a displacement within the plane must have zero dot product with its normal.
+### Part 4. Coplanarity Decision
+
+Since $\overrightarrow{AD} \cdot n = 0$, vector $\overrightarrow{AD}$ is perpendicular to normal vector $n$, meaning point $D$ lies entirely within the plane spanned by points $A, B, C$.

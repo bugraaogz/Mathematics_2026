@@ -1,19 +1,33 @@
-## Question
+# Exercise 10. Triangle Area from Vectors
 
-For $A=(0,0,0)$, $B=(2,1,0)$, $C=(1,3,2)$, use a cross product to find the parallelogram and triangle areas and explain the factor $1/2$.
+## Problem Statement
+
+The points $A=(0,0,0)$, $B=(2,1,0)$, and $C=(1,3,2)$ form a triangle. Construct $\overrightarrow{AB}$ and $\overrightarrow{AC}$, compute the area of the parallelogram using the cross product, and then find the area of the triangle. Explain the factor $\frac12$.
+
+---
 
 ## Solution
 
-The two sides from $A$ are
+### Part 1. Vector Construction
 
-$$\overrightarrow{AB}=(2,1,0),\qquad \overrightarrow{AC}=(1,3,2).$$
+$$
+\overrightarrow{AB} = \begin{pmatrix} 2 \\ 1 \\ 0 \end{pmatrix},\qquad \overrightarrow{AC} = \begin{pmatrix} 1 \\ 3 \\ 2 \end{pmatrix}
+$$
 
-Their cross product is
+### Part 2. Parallelogram Area
 
-$$\overrightarrow{AB}\times\overrightarrow{AC}=(2,-4,5),$$
+$$
+\overrightarrow{AB} \times \overrightarrow{AC} = \det \begin{pmatrix} i & j & k \\ 2 & 1 & 0 \\ 1 & 3 & 2 \end{pmatrix} = i(2 - 0) - j(4 - 0) + k(6 - 1) = \begin{pmatrix} 2 \\ -4 \\ 5 \end{pmatrix}
+$$
 
-whose length is $\sqrt{4+16+25}=\sqrt{45}=3\sqrt5$. Therefore the parallelogram area is $3\sqrt5$ and the triangle area is
+$$
+\mathrm{Area}_{\text{parallelogram}} = \|\overrightarrow{AB} \times \overrightarrow{AC}\| = \sqrt{2^2 + (-4)^2 + 5^2} = \sqrt{4 + 16 + 25} = \sqrt{45} = 3\sqrt{5}
+$$
 
-$$\frac12\,3\sqrt5=\frac{3\sqrt5}{2}.$$
+### Part 3. Triangle Area and Factor $\frac{1}{2}$
 
-The diagonal of a parallelogram made from the two side vectors divides it into two congruent triangles, which explains the factor $1/2$.
+$$
+\mathrm{Area}_{\text{triangle}} = \frac{1}{2} \mathrm{Area}_{\text{parallelogram}} = \frac{3\sqrt{5}}{2}
+$$
+
+The factor $\frac{1}{2}$ arises because a triangle formed by two vectors is exactly half of the parallelogram spanned by those same vectors.

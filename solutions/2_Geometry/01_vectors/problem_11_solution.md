@@ -1,23 +1,53 @@
-## Question
+# Exercise 11. Decomposition into Parallel and Perpendicular Components
 
-Decompose $u=(3,4)$ into components parallel and perpendicular to $v=(1,2)$, perform both requested checks, and explain why they are independent.
+## Problem Statement
+
+Decompose $u=(3,4)$ into components parallel and perpendicular to $v=(1,2)$. Check
+
+$$
+u=u_{\parallel}+u_{\perp},\qquad u_{\perp}\cdot v=0.
+$$
+
+Explain why these are two independent checks of correctness.
+
+---
 
 ## Solution
 
-The parallel component is the projection:
+### Part 1. Component Construction
 
-$$u_{\parallel}=\frac{u\cdot v}{v\cdot v}v=\frac{11}{5}(1,2)=\left(\frac{11}{5},\frac{22}{5}\right).$$
+Parallel component $u_{\parallel}$:
 
-Subtracting it from $u$ gives
+$$
+u \cdot v = 3(1) + 4(2) = 11,\qquad \|v\|^2 = 1^2 + 2^2 = 5
+$$
 
-$$u_{\perp}=u-u_{\parallel}=\left(\frac45,-\frac25\right).$$
+$$
+u_{\parallel} = \mathrm{proj}_v u = \frac{11}{5}\begin{pmatrix} 1 \\ 2 \end{pmatrix} = \begin{pmatrix} \frac{11}{5} \\ \frac{22}{5} \end{pmatrix}
+$$
 
-The reconstruction check is
+Perpendicular component $u_{\perp}$:
 
-$$u_{\parallel}+u_{\perp}=\left(\frac{15}{5},\frac{20}{5}\right)=(3,4)=u,$$
+$$
+u_{\perp} = u - u_{\parallel} = \begin{pmatrix} 3 \\ 4 \end{pmatrix} - \begin{pmatrix} \frac{11}{5} \\ \frac{22}{5} \end{pmatrix} = \begin{pmatrix} \frac{4}{5} \\ -\frac{2}{5} \end{pmatrix}
+$$
 
-while the orthogonality check is
+### Part 2. Verification
 
-$$u_{\perp}\cdot v=\frac45-\frac45=0.$$
+1. Vector Sum:
 
-Reconstruction checks that no component of $u$ was lost; the dot product separately checks that the residual has the required perpendicular direction. Either condition alone would not establish both facts.
+$$
+u_{\parallel} + u_{\perp} = \begin{pmatrix} \frac{11}{5} \\ \frac{22}{5} \end{pmatrix} + \begin{pmatrix} \frac{4}{5} \\ -\frac{2}{5} \end{pmatrix} = \begin{pmatrix} \frac{15}{5} \\ \frac{20}{5} \end{pmatrix} = \begin{pmatrix} 3 \\ 4 \end{pmatrix} = u
+$$
+
+2. Orthogonality:
+
+$$
+u_{\perp} \cdot v = \left(\frac{4}{5}\right)(1) + \left(-\frac{2}{5}\right)(2) = \frac{4 - 4}{5} = 0
+$$
+
+### Part 3. Explanation
+
+- Check 1 ($u = u_{\parallel} + u_{\perp}$) confirms algebraic completeness (no component is lost).
+- Check 2 ($u_{\perp} \cdot v = 0$) confirms directional orthogonality.
+Together, they independently verify a valid orthogonal decomposition.

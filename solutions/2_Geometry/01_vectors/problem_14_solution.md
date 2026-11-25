@@ -1,23 +1,43 @@
-## Question
+# Exercise 14. Closest Point on a Line
 
-For $P=(4,1)$ and the line through the origin in direction $v=(1,2)$, find the closest point and distance using projection, and verify the relevant perpendicularity.
+## Problem Statement
+
+Given a point $P=(4,1)$ and a line through the origin with direction $v=(1,2)$. Using projection, find the closest point on the line, the distance from $P$ to the line, and verify that the appropriate vector is perpendicular to the direction of the line.
+
+---
 
 ## Solution
 
-The closest point is the projection of $P$ onto the line:
+### Part 1. Finding Closest Point $Q$
 
-$$Q=\operatorname{proj}_v P=\frac{P\cdot v}{v\cdot v}v=\frac65(1,2)=\left(\frac65,\frac{12}{5}\right).$$
+Let vector $u = \overrightarrow{OP} = (4,1)^T$. The closest point $Q$ on the line is given by orthogonal projection of $u$ onto direction $v$:
 
-The displacement from the closest point to $P$ is
+$$
+u \cdot v = 4(1) + 1(2) = 6,\qquad \|v\|^2 = 1^2 + 2^2 = 5
+$$
 
-$$P-Q=\left(\frac{14}{5},-\frac75\right),$$
+$$
+Q = \mathrm{proj}_v u = \frac{6}{5}\begin{pmatrix} 1 \\ 2 \end{pmatrix} = \begin{pmatrix} \frac{6}{5} \\ \frac{12}{5} \end{pmatrix}
+$$
 
-so the distance is
+### Part 2. Distance from $P$ to Line
 
-$$\|P-Q\|=\sqrt{\frac{196+49}{25}}=\frac{7}{\sqrt5}.$$
+Vector $\overrightarrow{QP}$:
 
-The perpendicularity check is
+$$
+\overrightarrow{QP} = P - Q = \begin{pmatrix} 4 \\ 1 \end{pmatrix} - \begin{pmatrix} \frac{6}{5} \\ \frac{12}{5} \end{pmatrix} = \begin{pmatrix} \frac{14}{5} \\ -\frac{7}{5} \end{pmatrix}
+$$
 
-$$(P-Q)\cdot v=\left(\frac{14}{5},-\frac75\right)\cdot(1,2)=\frac{14}{5}-\frac{14}{5}=0.$$
+Distance:
 
-Thus the displacement from $Q$ to $P$ is perpendicular to the line direction. A perpendicular segment is the shortest segment from a point to a line, so this also explains why $Q$ is the closest point.
+$$
+d = \|\overrightarrow{QP}\| = \sqrt{\left(\frac{14}{5}\right)^2 + \left(-\frac{7}{5}\right)^2} = \sqrt{\frac{196 + 49}{25}} = \sqrt{\frac{245}{25}} = \frac{7\sqrt{5}}{5}
+$$
+
+### Part 3. Perpendicularity Verification
+
+$$
+\overrightarrow{QP} \cdot v = \left(\frac{14}{5}\right)(1) + \left(-\frac{7}{5}\right)(2) = \frac{14 - 14}{5} = 0
+$$
+
+Zero dot product confirms vector $\overrightarrow{QP}$ is orthogonal to direction $v$, proving $Q$ is the unique closest point.

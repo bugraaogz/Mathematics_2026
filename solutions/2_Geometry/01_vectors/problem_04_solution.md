@@ -1,19 +1,39 @@
-## Question
+# Exercise 4. Dot Product and Perpendicularity
 
-For $u=(1,2,-1)$ and $v=(2,-1,3)$, test perpendicularity. Find $a$ such that $w=(2,-1,a)$ is perpendicular to $u$ and check it.
+## Problem Statement
+
+For $u=(1,2,-1)$ and $v=(2,-1,3)$ compute $u\cdot v$ and determine whether the vectors are perpendicular. Then find $a$ so that $w=(2,-1,a)$ is perpendicular to $u$, and check the result.
+
+---
 
 ## Solution
 
-The dot product is
+### Part 1. Dot Product Computation
 
-$$u\cdot v=1\cdot2+2(-1)+(-1)3=-3.$$
+$$
+u \cdot v = (1)(2) + (2)(-1) + (-1)(3) = 2 - 2 - 3 = -3
+$$
 
-It is nonzero, so $u$ and $v$ are not perpendicular. For $w$ we require
+Since $u \cdot v = -3 \neq 0$, vectors $u$ and $v$ are **not perpendicular**.
 
-$$u\cdot w=1\cdot2+2(-1)+(-1)a=-a=0,$$
+### Part 2. Constructing Perpendicular Vector $w$
 
-which gives $a=0$. With $w=(2,-1,0)$, the check is
+For $w = (2, -1, a)^T$ to be perpendicular to $u$, their dot product must equal zero:
 
-$$u\cdot w=2-2+0=0,$$
+$$
+u \cdot w = 0 \implies (1)(2) + (2)(-1) + (-1)(a) = 0
+$$
 
-so the constructed vector is perpendicular to $u$.
+$$
+2 - 2 - a = 0 \implies a = 0
+$$
+
+### Part 3. Verification
+
+For $a = 0$, $w = (2, -1, 0)^T$:
+
+$$
+u \cdot w = 1(2) + 2(-1) + (-1)(0) = 2 - 2 + 0 = 0
+$$
+
+The zero dot product confirms $w \perp u$.

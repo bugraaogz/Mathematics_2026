@@ -1,19 +1,42 @@
-## Question
+# Exercise 3. Vector Normalization
 
-Normalize $v=(3,4)$, check the unit length, reconstruct $v$, and explain what normalization changes.
+## Problem Statement
+
+For $v=(3,4)$ find a unit vector $e$ with the same direction and orientation. Check that $\|e\|=1$, reconstruct $v$ in the form $v=\|v\|e$, and explain what changes during normalization and what remains unchanged.
+
+---
 
 ## Solution
 
-First, $\|v\|=\sqrt{3^2+4^2}=5$. Dividing by this positive length gives the unit vector
+### Part 1. Normalization
 
-$$e=\frac{v}{\|v\|}=\left(\frac35,\frac45\right).$$
+Magnitude of $v = (3,4)^T$:
 
-Indeed,
+$$
+\|v\| = \sqrt{3^2 + 4^2} = \sqrt{25} = 5
+$$
 
-$$\|e\|=\sqrt{\frac9{25}+\frac{16}{25}}=1,$$
+Unit vector $e$:
 
-and reconstruction yields
+$$
+e = \frac{v}{\|v\|} = \frac{1}{5}\begin{pmatrix} 3 \\ 4 \end{pmatrix} = \begin{pmatrix} \frac{3}{5} \\ \frac{4}{5} \end{pmatrix}
+$$
 
-$$\|v\|e=5\left(\frac35,\frac45\right)=(3,4)=v.$$
+### Part 2. Length Check and Reconstruction
 
-Normalization changes the length to one while preserving the direction and orientation because division is by the positive scalar $5$.
+Checking length of $e$:
+
+$$
+\|e\| = \sqrt{\left(\frac{3}{5}\right)^2 + \left(\frac{4}{5}\right)^2} = \sqrt{\frac{9}{25} + \frac{16}{25}} = \sqrt{1} = 1
+$$
+
+Reconstructing $v$:
+
+$$
+\|v\|e = 5 \begin{pmatrix} \frac{3}{5} \\ \frac{4}{5} \end{pmatrix} = \begin{pmatrix} 3 \\ 4 \end{pmatrix} = v
+$$
+
+### Part 3. Explanation
+
+- **What changes:** The length (magnitude) of vector $v$ changes from $5$ to $1$.
+- **What remains unchanged:** The spatial direction and orientation remain identical.
